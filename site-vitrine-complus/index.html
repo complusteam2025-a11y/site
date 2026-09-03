@@ -9,12 +9,21 @@
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 
 <!-- Favicon (inline SVG, pas de fichier externe requis) -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230B1B33'/%3E%3Ctext x='50' y='68' font-size='55' font-family='Poppins,Arial,sans-serif' font-weight='800' fill='%23FF6B35' text-anchor='middle'%3EC+%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2305070d'/%3E%3Ctext x='50' y='68' font-size='55' font-family='Arial,sans-serif' font-weight='800' fill='%23FF6B35' text-anchor='middle'%3EC+%3C/text%3E%3C/svg%3E">
+
+<!--
+  Crédits photo (Pexels, licence libre de droits — pexels.com/license) :
+  - Hero (réseau numérique) : photo 30547618, pexels.com/photo/30547618
+  - À propos (réunion d'équipe) : photo 9301291 par Mikhail Nilov, pexels.com/photo/9301291
+  - Zone d'intervention (métropole africaine de nuit) : photo 33721959, pexels.com/photo/33721959
+  - Portfolio : photos 34206104, 36675302, 4164088, 33206676, 12537427, 31575852, pexels.com/photo/<id>
+  - Contact (lumières urbaines) : photo 373543, pexels.com/photo/373543
+-->
 </head>
 <body>
 
@@ -45,6 +54,7 @@
   <!-- ============ HERO ============ -->
   <section class="hero" id="accueil">
     <div class="hero-bg-shape"></div>
+    <div class="hero-glow-2"></div>
     <div class="container hero-inner fade-in">
       <p class="eyebrow">Agence de communication digitale 360°</p>
       <h1>COM+, votre partenaire communication digitale <span class="text-accent">360°</span> au Cameroun</h1>
@@ -114,41 +124,47 @@
   <section class="about" id="apropos">
     <div class="container">
       <div class="about-intro">
-        <div class="fade-in">
-          <p class="section-eyebrow">Qui sommes-nous</p>
-          <h2 class="section-title">À propos de COM+</h2>
-          <p class="section-desc left">
-            COM+ est une agence de communication digitale 360° basée au Cameroun. Notre mission est
-            d'accompagner les entreprises, institutions et porteurs de projets du <strong>Grand Sud</strong>
-            dans la construction d'une communication forte, cohérente et impactante.
-          </p>
-          <p class="section-desc left">
-            Notre vision : devenir la référence régionale de la communication intégrée, en combinant
-            créativité, rigueur stratégique et maîtrise technique, au plus près des réalités locales de
-            Douala, Yaoundé, Kribi, Ebolowa et Bertoua.
-          </p>
+        <div class="about-media fade-in">
+          <img src="https://images.pexels.com/photos/9301291/pexels-photo-9301291.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="Équipe de professionnels en réunion de communication" loading="lazy" width="900" height="675">
         </div>
 
-        <div class="about-values fade-in">
-          <div class="value-item">
-            <span class="value-icon">💡</span>
-            <div>
-              <h4>Créativité</h4>
-              <p>Des idées originales au service de vos objectifs.</p>
-            </div>
+        <div>
+          <div class="fade-in">
+            <p class="section-eyebrow">Qui sommes-nous</p>
+            <h2 class="section-title">À propos de COM+</h2>
+            <p class="section-desc left">
+              COM+ est une agence de communication digitale 360° basée au Cameroun. Notre mission est
+              d'accompagner les entreprises, institutions et porteurs de projets du <strong>Grand Sud</strong>
+              dans la construction d'une communication forte, cohérente et impactante.
+            </p>
+            <p class="section-desc left">
+              Notre vision : devenir la référence régionale de la communication intégrée, en combinant
+              créativité, rigueur stratégique et maîtrise technique, au plus près des réalités locales de
+              Douala, Yaoundé, Kribi, Ebolowa et Bertoua.
+            </p>
           </div>
-          <div class="value-item">
-            <span class="value-icon">🤝</span>
-            <div>
-              <h4>Proximité</h4>
-              <p>Une équipe ancrée dans le Grand Sud du Cameroun.</p>
+
+          <div class="about-values fade-in">
+            <div class="value-item">
+              <span class="value-icon">💡</span>
+              <div>
+                <h4>Créativité</h4>
+                <p>Des idées originales au service de vos objectifs.</p>
+              </div>
             </div>
-          </div>
-          <div class="value-item">
-            <span class="value-icon">📈</span>
-            <div>
-              <h4>Résultats</h4>
-              <p>Une approche orientée impact et performance.</p>
+            <div class="value-item">
+              <span class="value-icon">🤝</span>
+              <div>
+                <h4>Proximité</h4>
+                <p>Une équipe ancrée dans le Grand Sud du Cameroun.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <span class="value-icon">📈</span>
+              <div>
+                <h4>Résultats</h4>
+                <p>Une approche orientée impact et performance.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -198,7 +214,10 @@
 
       <div class="portfolio-grid">
         <article class="project-card fade-in">
-          <div class="project-visual visual-1"><span class="project-tag">Stratégie</span></div>
+          <div class="project-visual">
+            <img src="https://images.pexels.com/photos/34206104/pexels-photo-34206104.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Présentation stratégique en salle de réunion" loading="lazy" width="800" height="500">
+            <span class="project-tag">Stratégie</span>
+          </div>
           <div class="project-info">
             <h4>Campagne de lancement — Marque locale</h4>
             <p>Douala</p>
@@ -206,7 +225,10 @@
         </article>
 
         <article class="project-card fade-in">
-          <div class="project-visual visual-2"><span class="project-tag">Événementiel</span></div>
+          <div class="project-visual">
+            <img src="https://images.pexels.com/photos/36675302/pexels-photo-36675302.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Foule sous des lumières de scène lors d'un événement" loading="lazy" width="800" height="500">
+            <span class="project-tag">Événementiel</span>
+          </div>
           <div class="project-info">
             <h4>Couverture événementielle — Festival de Kribi</h4>
             <p>Kribi</p>
@@ -214,7 +236,10 @@
         </article>
 
         <article class="project-card fade-in">
-          <div class="project-visual visual-3"><span class="project-tag">Vidéo</span></div>
+          <div class="project-visual">
+            <img src="https://images.pexels.com/photos/4164088/pexels-photo-4164088.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Caméra et objectifs de production vidéo" loading="lazy" width="800" height="500">
+            <span class="project-tag">Vidéo</span>
+          </div>
           <div class="project-info">
             <h4>Spot publicitaire — Institution régionale</h4>
             <p>Yaoundé</p>
@@ -222,7 +247,10 @@
         </article>
 
         <article class="project-card fade-in">
-          <div class="project-visual visual-4"><span class="project-tag">Réseaux sociaux</span></div>
+          <div class="project-visual">
+            <img src="https://images.pexels.com/photos/33206676/pexels-photo-33206676.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Écran de smartphone affichant des applications de réseaux sociaux" loading="lazy" width="800" height="500">
+            <span class="project-tag">Réseaux sociaux</span>
+          </div>
           <div class="project-info">
             <h4>Community management — PME agroalimentaire</h4>
             <p>Ebolowa</p>
@@ -230,7 +258,10 @@
         </article>
 
         <article class="project-card fade-in">
-          <div class="project-visual visual-5"><span class="project-tag">Stratégie</span></div>
+          <div class="project-visual">
+            <img src="https://images.pexels.com/photos/12537427/pexels-photo-12537427.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Visualisation graphique de données bleues" loading="lazy" width="800" height="500">
+            <span class="project-tag">Stratégie</span>
+          </div>
           <div class="project-info">
             <h4>Plan média — Opérateur de services</h4>
             <p>Bertoua</p>
@@ -238,7 +269,10 @@
         </article>
 
         <article class="project-card fade-in">
-          <div class="project-visual visual-6"><span class="project-tag">Vidéo</span></div>
+          <div class="project-visual">
+            <img src="https://images.pexels.com/photos/31575852/pexels-photo-31575852.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Microphone de studio professionnel avec éclairage RGB" loading="lazy" width="800" height="500">
+            <span class="project-tag">Vidéo</span>
+          </div>
           <div class="project-info">
             <h4>Documentaire de marque — Coopérative locale</h4>
             <p>Douala</p>

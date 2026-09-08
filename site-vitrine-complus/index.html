@@ -3,34 +3,75 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>COM+ | Agence de communication digitale 360° — Cameroun</title>
-<meta name="description" content="COM+, agence de communication digitale 360° au Cameroun. Stratégie, production audiovisuelle, digital et événementiel à Douala, Yaoundé, Kribi, Ebolowa, Bertoua.">
+<title>COM+ | Hub interconnecté d'entreprises — Votre vision, notre expertise</title>
+<meta name="description" content="COM+ connecte votre entreprise à un hub interconnecté d'expertise en communication digitale 360° : stratégie, production audiovisuelle, digital et événementiel au Cameroun.">
 
-<!-- Google Fonts -->
+<!-- Google Fonts — Typographies de la charte COM+ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 
-<!-- Favicon (inline SVG, pas de fichier externe requis) -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230B1B33'/%3E%3Ctext x='50' y='68' font-size='55' font-family='Poppins,Arial,sans-serif' font-weight='800' fill='%23FF6B35' text-anchor='middle'%3EC+%3C/text%3E%3C/svg%3E">
+<!-- Favicon (SVG inline, palette officielle COM+) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%232E1A3A'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Arial,sans-serif' font-weight='900' fill='%23F28C28' text-anchor='middle'%3EC+%3C/text%3E%3C/svg%3E">
 </head>
 <body>
+
+<!-- ============ DEFINITIONS SVG (logo, icônes, dégradés — non affichées) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <radialGradient id="orbGrad" cx="35%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#FFE3BE"/>
+      <stop offset="38%" stop-color="#F28C28"/>
+      <stop offset="82%" stop-color="#E05206"/>
+      <stop offset="100%" stop-color="#9E3A03"/>
+    </radialGradient>
+
+    <!-- Emblème du "O" — inspiré du ruban / feuille de la charte graphique COM+ -->
+    <symbol id="emblem-o" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="47" fill="url(#orbGrad)"/>
+      <circle cx="50" cy="50" r="47" fill="none" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="1.5"/>
+      <path d="M22,55 C30,28 57,18 78,32 C61,26 40,35 33,55 C39,74 60,80 74,68 C63,86 35,83 24,66 Z" fill="#FFFFFF" opacity="0.92"/>
+      <path d="M27,40 C40,24 63,23 77,38 C64,29 45,31 35,45 Z" fill="#2E1A3A" opacity="0.5"/>
+      <circle cx="32" cy="61" r="4" fill="#2E1A3A"/>
+      <rect x="58" y="41" width="3.6" height="15" rx="1.8" fill="#2E1A3A"/>
+      <rect x="65" y="47" width="3.6" height="9" rx="1.8" fill="#2E1A3A"/>
+      <rect x="72" y="51" width="3.6" height="5" rx="1.8" fill="#2E1A3A"/>
+      <circle cx="44" cy="67" r="6.5" fill="none" stroke="#2E1A3A" stroke-width="2.2"/>
+      <ellipse cx="37" cy="29" rx="17" ry="9" fill="#FFFFFF" opacity="0.22"/>
+    </symbol>
+
+    <!-- Icônes de la charte graphique -->
+    <symbol id="icon-mic" viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v5a3 3 0 0 0 3 3z"/><path d="M19 11a7 7 0 0 1-14 0"/><path d="M12 18v3M8 21h8"/></symbol>
+    <symbol id="icon-bars" viewBox="0 0 24 24"><path d="M4 20v-5M9.5 20V11M15 20V7M20.5 20V4"/></symbol>
+    <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4V5z"/><path d="M8 9h8M8 13h5"/></symbol>
+    <symbol id="icon-share" viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path d="M8.1 10.8 15.9 7M8.1 13.2l7.8 3.8"/></symbol>
+    <symbol id="icon-cloud" viewBox="0 0 24 24"><path d="M7 18h10a4 4 0 0 0 0-8 5.5 5.5 0 0 0-10.7 1.6A3.5 3.5 0 0 0 7 18z"/><path d="M12 12v6M9.5 15.5 12 13l2.5 2.5"/></symbol>
+    <symbol id="icon-music" viewBox="0 0 24 24"><path d="M9 18a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/><path d="M18 16a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/><path d="M11.5 13V5.5L20.5 4v8.5"/></symbol>
+    <symbol id="icon-strategy" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M20 20v-4"/></symbol>
+    <symbol id="icon-network" viewBox="0 0 24 24"><circle cx="12" cy="6" r="2.4"/><circle cx="5" cy="18" r="2.4"/><circle cx="19" cy="18" r="2.4"/><path d="M12 8.4 6.5 16M12 8.4 17.5 16M7.4 18h9.2"/></symbol>
+    <symbol id="icon-rocket" viewBox="0 0 24 24"><path d="M12 3c3 2 5 6 4 12l-4 3-4-3c-1-6 1-10 4-12z"/><circle cx="12" cy="10" r="1.7"/><path d="M8.5 15 6 20l3.2-1.6M15.5 15 18 20l-3.2-1.6"/></symbol>
+  </defs>
+</svg>
 
 <!-- ============ HEADER / NAVIGATION ============ -->
 <header class="site-header" id="header">
   <div class="container header-inner">
-    <a href="#accueil" class="logo">COM<span class="logo-plus">+</span></a>
+    <a href="#accueil" class="logo logo--header" aria-label="COM+ — Accueil">
+      <span class="logo-word">
+        <span class="logo-letter">C</span><svg class="logo-o" aria-hidden="true"><use href="#emblem-o"></use></svg><span class="logo-letter">M</span><span class="logo-plus">+</span>
+      </span>
+    </a>
 
     <nav class="nav" id="nav">
       <ul class="nav-list">
         <li><a href="#accueil" class="nav-link">Accueil</a></li>
+        <li><a href="#hub" class="nav-link">Le Hub</a></li>
+        <li><a href="#entreprises" class="nav-link">Entreprises</a></li>
         <li><a href="#services" class="nav-link">Services</a></li>
         <li><a href="#apropos" class="nav-link">À propos</a></li>
-        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-        <li><a href="#zone" class="nav-link">Zone d'action</a></li>
-        <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+        <li><a href="#contact" class="nav-link nav-cta">Rejoindre le Hub</a></li>
       </ul>
     </nav>
 
@@ -44,65 +85,222 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero" id="accueil">
-    <div class="hero-bg-shape"></div>
-    <div class="container hero-inner fade-in">
-      <p class="eyebrow">Agence de communication digitale 360°</p>
-      <h1>COM+, votre partenaire communication digitale <span class="text-accent">360°</span> au Cameroun</h1>
-      <p class="hero-sub">
-        Basée au Cameroun, COM+ accompagne marques, institutions et entrepreneurs du
-        <strong>Grand Sud</strong> — Douala, Yaoundé, Kribi, Ebolowa, Bertoua — avec une expertise
-        complète en stratégie, production audiovisuelle, digital et événementiel.
-      </p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Demander un devis</a>
-        <a href="#services" class="btn btn-outline">Découvrir nos services</a>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="bg-dots on-dark" style="inset:0" aria-hidden="true"></div>
+    <div class="bg-stripes" aria-hidden="true"></div>
+
+    <div class="container hero-inner">
+      <div class="fade-in">
+        <div class="hero-brand logo-lockup" style="align-items:flex-start">
+          <a href="#accueil" class="logo logo--hero" aria-label="COM+">
+            <span class="logo-word">
+              <span class="logo-letter">C</span><svg class="logo-o" aria-hidden="true"><use href="#emblem-o"></use></svg><span class="logo-letter">M</span><span class="logo-plus">+</span>
+            </span>
+          </a>
+          <p class="logo-tagline on-dark" style="text-align:left;margin-top:6px">Votre vision, notre expertise</p>
+        </div>
+
+        <p class="eyebrow"><svg class="icon"><use href="#icon-network"></use></svg> Hub interconnecté d'entreprises</p>
+        <h1>COM+ connecte votre entreprise à un <span class="text-accent">écosystème d'expertise</span> 360°</h1>
+        <p class="hero-sub">
+          Le Hub COM+ réunit, autour d'une même expertise en communication digitale, des entreprises
+          du Grand Sud du Cameroun — Douala, Yaoundé, Kribi, Ebolowa, Bertoua — connectées entre elles
+          et accompagnées par une seule et même équipe.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Rejoindre le Hub</a>
+          <a href="#hub" class="btn btn-outline">Découvrir le concept</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-number">30+</span><span class="stat-label">Entreprises connectées</span></div>
+          <div class="stat"><span class="stat-number">5</span><span class="stat-label">Villes couvertes</span></div>
+          <div class="stat"><span class="stat-number">360°</span><span class="stat-label">Expertise intégrée</span></div>
+        </div>
       </div>
 
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-number">5</span>
-          <span class="stat-label">Villes couvertes</span>
+      <div class="fade-in">
+        <div class="hub-visual" aria-hidden="true">
+          <div class="hub-plane">
+            <div class="hub-ring"></div>
+            <svg class="hub-lines" viewBox="0 0 400 400">
+              <line x1="200" y1="200" x2="375" y2="200"></line>
+              <line x1="200" y1="200" x2="287.5" y2="351.5"></line>
+              <line x1="200" y1="200" x2="112.5" y2="351.5"></line>
+              <line x1="200" y1="200" x2="25" y2="200"></line>
+              <line x1="200" y1="200" x2="112.5" y2="48.5"></line>
+              <line x1="200" y1="200" x2="287.5" y2="48.5"></line>
+            </svg>
+
+            <div class="hub-center">
+              <svg width="100%" height="100%" aria-hidden="true"><use href="#emblem-o"></use></svg>
+            </div>
+
+            <div class="hub-node" style="left:375px;top:200px">
+              <div class="hub-node-badge">AS</div>
+              <span class="hub-node-label">AgroSud</span>
+            </div>
+            <div class="hub-node" style="left:287.5px;top:351.5px;animation-delay:.4s">
+              <div class="hub-node-badge">KE</div>
+              <span class="hub-node-label">Kribi Energy</span>
+            </div>
+            <div class="hub-node" style="left:112.5px;top:351.5px;animation-delay:.8s">
+              <div class="hub-node-badge">DB</div>
+              <span class="hub-node-label">Douala Bank</span>
+            </div>
+            <div class="hub-node" style="left:25px;top:200px;animation-delay:1.2s">
+              <div class="hub-node-badge">YH</div>
+              <span class="hub-node-label">Yaoundé Health</span>
+            </div>
+            <div class="hub-node" style="left:112.5px;top:48.5px;animation-delay:1.6s">
+              <div class="hub-node-badge">BT</div>
+              <span class="hub-node-label">Bertoua BTP</span>
+            </div>
+            <div class="hub-node" style="left:287.5px;top:48.5px;animation-delay:2s">
+              <div class="hub-node-badge">EA</div>
+              <span class="hub-node-label">Ebolowa Agri</span>
+            </div>
+          </div>
         </div>
-        <div class="stat">
-          <span class="stat-number">4</span>
-          <span class="stat-label">Pôles d'expertise</span>
-        </div>
-        <div class="stat">
-          <span class="stat-number">360°</span>
-          <span class="stat-label">Accompagnement complet</span>
-        </div>
+        <p class="hub-caption">Aperçu illustratif du Hub — chaque entreprise cliente reste connectée à l'expertise COM+</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ CONCEPT DU HUB ============ -->
+  <section class="hub-concept" id="hub">
+    <div class="container">
+      <div class="section-header center fade-in">
+        <p class="section-eyebrow">Le concept</p>
+        <h2 class="section-title">Comment fonctionne le Hub COM+</h2>
+        <p class="section-desc">Un point d'entrée unique pour connecter votre entreprise à une expertise complète en communication, partagée entre tous les membres du Hub.</p>
+      </div>
+
+      <div class="steps-grid">
+        <article class="step-card fade-in">
+          <span class="step-number">01</span>
+          <div class="step-icon"><svg class="icon" style="stroke:#fff"><use href="#icon-network"></use></svg></div>
+          <h3>Connexion au Hub</h3>
+          <p>Votre entreprise rejoint l'écosystème COM+ : audit initial, définition des objectifs et intégration à notre réseau interconnecté de clients et de savoir-faire.</p>
+        </article>
+
+        <article class="step-card fade-in">
+          <span class="step-number">02</span>
+          <div class="step-icon"><svg class="icon" style="stroke:#fff"><use href="#icon-strategy"></use></svg></div>
+          <h3>Stratégie &amp; production</h3>
+          <p>Nos pôles conseil, production audiovisuelle, digital et événementiel travaillent ensemble pour donner corps à votre vision, avec les ressources mutualisées du Hub.</p>
+        </article>
+
+        <article class="step-card fade-in">
+          <span class="step-number">03</span>
+          <div class="step-icon"><svg class="icon" style="stroke:#fff"><use href="#icon-rocket"></use></svg></div>
+          <h3>Rayonnement interconnecté</h3>
+          <p>Votre entreprise gagne en visibilité au sein du Hub et au-delà : synergies entre membres, mise en réseau et diffusion multicanale de votre communication.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ENTREPRISES CONNECTÉES ============ -->
+  <section class="companies" id="entreprises">
+    <div class="container">
+      <div class="section-header center fade-in">
+        <p class="section-eyebrow">L'écosystème COM+</p>
+        <h2 class="section-title">Entreprises connectées au Hub</h2>
+        <p class="section-desc">Un aperçu illustratif des secteurs et entreprises accompagnés au sein du Hub interconnecté COM+ à travers le Grand Sud du Cameroun.</p>
+      </div>
+
+      <div class="companies-grid">
+        <article class="company-card fade-in tilt">
+          <div class="company-top">
+            <div class="company-mark">AS</div>
+            <div><div class="company-name">Groupe AgroSud</div><span class="company-sector">Agro-industrie</span></div>
+          </div>
+          <p class="company-desc">Accompagnement stratégique et production audiovisuelle pour valoriser la filière agricole locale.</p>
+          <span class="company-link">Douala <svg class="icon" style="width:.8em;height:.8em"><use href="#icon-share"></use></svg></span>
+        </article>
+
+        <article class="company-card fade-in tilt">
+          <div class="company-top">
+            <div class="company-mark">KE</div>
+            <div><div class="company-name">Kribi Energy</div><span class="company-sector">Énergie</span></div>
+          </div>
+          <p class="company-desc">Communication institutionnelle et couverture événementielle pour un acteur clé de l'énergie régionale.</p>
+          <span class="company-link">Kribi <svg class="icon" style="width:.8em;height:.8em"><use href="#icon-share"></use></svg></span>
+        </article>
+
+        <article class="company-card fade-in tilt">
+          <div class="company-top">
+            <div class="company-mark">DB</div>
+            <div><div class="company-name">Douala Digital Bank</div><span class="company-sector">Finance</span></div>
+          </div>
+          <p class="company-desc">Stratégie digitale et gestion des réseaux sociaux pour renforcer la confiance et la portée de la marque.</p>
+          <span class="company-link">Douala <svg class="icon" style="width:.8em;height:.8em"><use href="#icon-share"></use></svg></span>
+        </article>
+
+        <article class="company-card fade-in tilt">
+          <div class="company-top">
+            <div class="company-mark">YH</div>
+            <div><div class="company-name">Yaoundé Health Clinic</div><span class="company-sector">Santé</span></div>
+          </div>
+          <p class="company-desc">Production vidéo et campagnes de sensibilisation pour une communication de santé claire et accessible.</p>
+          <span class="company-link">Yaoundé <svg class="icon" style="width:.8em;height:.8em"><use href="#icon-share"></use></svg></span>
+        </article>
+
+        <article class="company-card fade-in tilt">
+          <div class="company-top">
+            <div class="company-mark">BT</div>
+            <div><div class="company-name">Bertoua Constructions</div><span class="company-sector">BTP</span></div>
+          </div>
+          <p class="company-desc">Plan média et reportages de chantier pour valoriser les réalisations et la fiabilité de l'entreprise.</p>
+          <span class="company-link">Bertoua <svg class="icon" style="width:.8em;height:.8em"><use href="#icon-share"></use></svg></span>
+        </article>
+
+        <article class="company-card fade-in tilt">
+          <div class="company-top">
+            <div class="company-mark">EA</div>
+            <div><div class="company-name">Ebolowa AgriTech</div><span class="company-sector">AgriTech</span></div>
+          </div>
+          <p class="company-desc">Community management et documentaire de marque pour une coopérative en pleine croissance.</p>
+          <span class="company-link">Ebolowa <svg class="icon" style="width:.8em;height:.8em"><use href="#icon-share"></use></svg></span>
+        </article>
+      </div>
+
+      <p class="companies-note">Entreprises présentées à titre illustratif — chaque profil du Hub est personnalisable avec vos propres clients, logos et secteurs.</p>
     </div>
   </section>
 
   <!-- ============ SERVICES ============ -->
   <section class="services" id="services">
     <div class="container">
-      <p class="section-eyebrow fade-in">Ce que nous faisons</p>
-      <h2 class="section-title fade-in">Nos services</h2>
-      <p class="section-desc fade-in">Une offre complète pour construire, produire et diffuser votre communication, du conseil stratégique jusqu'à l'exécution terrain.</p>
+      <div class="section-header center fade-in">
+        <p class="section-eyebrow">Ce que nous faisons</p>
+        <h2 class="section-title">Nos services</h2>
+        <p class="section-desc">Une offre complète pour construire, produire et diffuser votre communication, du conseil stratégique jusqu'à l'exécution terrain.</p>
+      </div>
 
       <div class="cards-grid">
-        <article class="card fade-in">
-          <div class="card-icon">🎯</div>
+        <article class="card fade-in tilt">
+          <div class="card-icon"><svg class="icon"><use href="#icon-strategy"></use></svg></div>
           <h3>Conseil &amp; Stratégie</h3>
           <p>Audit de communication, définition de la stratégie de marque et élaboration de plans médias adaptés à vos objectifs et à votre marché.</p>
         </article>
 
-        <article class="card fade-in">
-          <div class="card-icon">🎬</div>
+        <article class="card fade-in tilt">
+          <div class="card-icon"><svg class="icon"><use href="#icon-music"></use></svg></div>
           <h3>Production Audiovisuelle</h3>
           <p>Vidéo, photographie, motion design et spots publicitaires : nous racontons votre marque en images, du concept au montage final.</p>
         </article>
 
-        <article class="card fade-in">
-          <div class="card-icon">📱</div>
+        <article class="card fade-in tilt">
+          <div class="card-icon"><svg class="icon"><use href="#icon-chat"></use></svg></div>
           <h3>Communication Digitale</h3>
           <p>Gestion des réseaux sociaux, community management et campagnes publicitaires en ligne pour développer votre présence digitale.</p>
         </article>
 
-        <article class="card fade-in">
-          <div class="card-icon">🎪</div>
+        <article class="card fade-in tilt">
+          <div class="card-icon"><svg class="icon"><use href="#icon-mic"></use></svg></div>
           <h3>Événementiel</h3>
           <p>Organisation et couverture complète de vos événements : conception, logistique, animation et restitution médiatique.</p>
         </article>
@@ -118,9 +316,9 @@
           <p class="section-eyebrow">Qui sommes-nous</p>
           <h2 class="section-title">À propos de COM+</h2>
           <p class="section-desc left">
-            COM+ est une agence de communication digitale 360° basée au Cameroun. Notre mission est
-            d'accompagner les entreprises, institutions et porteurs de projets du <strong>Grand Sud</strong>
-            dans la construction d'une communication forte, cohérente et impactante.
+            COM+ est une agence de communication digitale 360° basée au Cameroun, qui anime un
+            <strong>Hub interconnecté</strong> d'entreprises du <strong>Grand Sud</strong>. Notre mission :
+            accompagner chaque membre du Hub dans la construction d'une communication forte, cohérente et impactante.
           </p>
           <p class="section-desc left">
             Notre vision : devenir la référence régionale de la communication intégrée, en combinant
@@ -131,25 +329,16 @@
 
         <div class="about-values fade-in">
           <div class="value-item">
-            <span class="value-icon">💡</span>
-            <div>
-              <h4>Créativité</h4>
-              <p>Des idées originales au service de vos objectifs.</p>
-            </div>
+            <span class="value-icon"><svg class="icon" style="stroke:#fff"><use href="#icon-rocket"></use></svg></span>
+            <div><h4>Créativité</h4><p>Des idées originales au service de vos objectifs.</p></div>
           </div>
           <div class="value-item">
-            <span class="value-icon">🤝</span>
-            <div>
-              <h4>Proximité</h4>
-              <p>Une équipe ancrée dans le Grand Sud du Cameroun.</p>
-            </div>
+            <span class="value-icon"><svg class="icon" style="stroke:#fff"><use href="#icon-network"></use></svg></span>
+            <div><h4>Interconnexion</h4><p>Un Hub ancré dans le Grand Sud du Cameroun.</p></div>
           </div>
           <div class="value-item">
-            <span class="value-icon">📈</span>
-            <div>
-              <h4>Résultats</h4>
-              <p>Une approche orientée impact et performance.</p>
-            </div>
+            <span class="value-icon"><svg class="icon" style="stroke:#fff"><use href="#icon-bars"></use></svg></span>
+            <div><h4>Résultats</h4><p>Une approche orientée impact et performance.</p></div>
           </div>
         </div>
       </div>
@@ -189,65 +378,6 @@
     </div>
   </section>
 
-  <!-- ============ PORTFOLIO ============ -->
-  <section class="portfolio" id="portfolio">
-    <div class="container">
-      <p class="section-eyebrow fade-in">Nos réalisations</p>
-      <h2 class="section-title fade-in">Portfolio</h2>
-      <p class="section-desc fade-in">Un aperçu de projets menés pour nos clients à travers le Grand Sud du Cameroun.</p>
-
-      <div class="portfolio-grid">
-        <article class="project-card fade-in">
-          <div class="project-visual visual-1"><span class="project-tag">Stratégie</span></div>
-          <div class="project-info">
-            <h4>Campagne de lancement — Marque locale</h4>
-            <p>Douala</p>
-          </div>
-        </article>
-
-        <article class="project-card fade-in">
-          <div class="project-visual visual-2"><span class="project-tag">Événementiel</span></div>
-          <div class="project-info">
-            <h4>Couverture événementielle — Festival de Kribi</h4>
-            <p>Kribi</p>
-          </div>
-        </article>
-
-        <article class="project-card fade-in">
-          <div class="project-visual visual-3"><span class="project-tag">Vidéo</span></div>
-          <div class="project-info">
-            <h4>Spot publicitaire — Institution régionale</h4>
-            <p>Yaoundé</p>
-          </div>
-        </article>
-
-        <article class="project-card fade-in">
-          <div class="project-visual visual-4"><span class="project-tag">Réseaux sociaux</span></div>
-          <div class="project-info">
-            <h4>Community management — PME agroalimentaire</h4>
-            <p>Ebolowa</p>
-          </div>
-        </article>
-
-        <article class="project-card fade-in">
-          <div class="project-visual visual-5"><span class="project-tag">Stratégie</span></div>
-          <div class="project-info">
-            <h4>Plan média — Opérateur de services</h4>
-            <p>Bertoua</p>
-          </div>
-        </article>
-
-        <article class="project-card fade-in">
-          <div class="project-visual visual-6"><span class="project-tag">Vidéo</span></div>
-          <div class="project-info">
-            <h4>Documentaire de marque — Coopérative locale</h4>
-            <p>Douala</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ ZONE D'INTERVENTION ============ -->
   <section class="zone" id="zone">
     <div class="container zone-inner">
@@ -255,7 +385,7 @@
         <p class="section-eyebrow">Où nous intervenons</p>
         <h2 class="section-title">Zone d'intervention</h2>
         <p class="section-desc left">
-          COM+ déploie son expertise à travers tout le Grand Sud du Cameroun, au plus près de ses clients.
+          Le Hub COM+ déploie son expertise à travers tout le Grand Sud du Cameroun, au plus près de ses entreprises membres.
         </p>
         <ul class="city-list">
           <li><span class="city-dot"></span>Douala</li>
@@ -273,11 +403,11 @@
                    C 175 310, 145 325, 115 315 C 85 325, 55 305, 55 275
                    C 30 260, 25 220, 45 195 C 30 165, 40 125, 70 110
                    C 60 80, 75 40, 100 10 Z"
-                fill="url(#mapGradient)" stroke="#FF6B35" stroke-width="2"/>
+                fill="url(#mapGradient)" stroke="#F28C28" stroke-width="2"/>
           <defs>
             <linearGradient id="mapGradient" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#12274a"/>
-              <stop offset="100%" stop-color="#0B1B33"/>
+              <stop offset="0%" stop-color="#3E2650"/>
+              <stop offset="100%" stop-color="#1c0f26"/>
             </linearGradient>
           </defs>
 
@@ -297,13 +427,13 @@
     <div class="container contact-inner">
       <div class="fade-in">
         <p class="section-eyebrow">Parlons de votre projet</p>
-        <h2 class="section-title">Contactez-nous</h2>
-        <p class="section-desc left">Une question, un projet, une demande de devis ? Écrivez-nous, notre équipe vous répond rapidement.</p>
+        <h2 class="section-title">Rejoignez le Hub</h2>
+        <p class="section-desc left">Une question, un projet, une envie de connecter votre entreprise au Hub COM+ ? Écrivez-nous, notre équipe vous répond rapidement.</p>
 
         <ul class="contact-info">
-          <li><span class="contact-icon">📍</span> Akwa, Boulevard de la Liberté, Douala, Cameroun</li>
-          <li><span class="contact-icon">📞</span> +237 6 90 00 00 00</li>
-          <li><span class="contact-icon">✉️</span> contact@complus.cm</li>
+          <li><svg class="contact-icon icon"><use href="#icon-network"></use></svg> Akwa, Boulevard de la Liberté, Douala, Cameroun</li>
+          <li><svg class="contact-icon icon"><use href="#icon-mic"></use></svg> +237 6 90 00 00 00</li>
+          <li><svg class="contact-icon icon"><use href="#icon-chat"></use></svg> contact@complus.cm</li>
         </ul>
 
         <div class="socials">
@@ -325,6 +455,10 @@
           <input type="text" id="name" name="name" placeholder="Votre nom" required>
         </div>
         <div class="form-group">
+          <label for="company">Entreprise</label>
+          <input type="text" id="company" name="company" placeholder="Nom de votre entreprise">
+        </div>
+        <div class="form-group">
           <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="vous@exemple.com" required>
         </div>
@@ -332,7 +466,7 @@
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet..." required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary btn-block">Envoyer le message</button>
+        <button type="submit" class="btn btn-primary btn-block">Rejoindre le Hub</button>
         <p class="form-confirmation" id="formConfirmation" role="status" aria-live="polite"></p>
       </form>
     </div>
@@ -342,19 +476,25 @@
 
 <!-- ============ FOOTER ============ -->
 <footer class="site-footer">
+  <div class="bg-dots on-dark" style="inset:0" aria-hidden="true"></div>
   <div class="container footer-grid">
     <div class="footer-brand">
-      <a href="#accueil" class="logo footer-logo">COM<span class="logo-plus">+</span></a>
-      <p>Agence de communication digitale 360° au service du Grand Sud du Cameroun.</p>
+      <a href="#accueil" class="logo logo--footer footer-logo" aria-label="COM+">
+        <span class="logo-word">
+          <span class="logo-letter">C</span><svg class="logo-o" aria-hidden="true"><use href="#emblem-o"></use></svg><span class="logo-letter">M</span><span class="logo-plus">+</span>
+        </span>
+      </a>
+      <p class="logo-tagline on-dark" style="text-align:left;margin-bottom:14px">Votre vision, notre expertise</p>
+      <p>Le Hub interconnecté de communication digitale 360° au service du Grand Sud du Cameroun.</p>
     </div>
 
     <div class="footer-links">
       <h5>Liens rapides</h5>
       <ul>
         <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#hub">Le Hub</a></li>
+        <li><a href="#entreprises">Entreprises</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#apropos">À propos</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -378,8 +518,9 @@
     </div>
   </div>
 
-  <div class="footer-bottom">
+  <div class="container footer-bottom">
     <p>&copy; <span id="year"></span> COM+ — Tous droits réservés.</p>
+    <p class="footer-hashtags">#COMPLUS #VOTREVISIONNOTREEXPERTISE</p>
   </div>
 </footer>
 

@@ -1,15 +1,29 @@
 /* ==========================================================================
    COM+ — Script principal
-   Menu burger, fermeture au clic, animations au scroll, formulaire, footer
+   Header au scroll, menu burger, tilt 3D, animations au scroll, formulaire
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', function () {
+
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
   /* ---------- Année courante dans le footer ---------- */
   var yearEl = document.getElementById('year');
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
+
+  /* ---------- Header : fond plein au scroll ---------- */
+  var header = document.getElementById('header');
+
+  function toggleHeader() {
+    if (!header) return;
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  }
+
+  window.addEventListener('scroll', toggleHeader, { passive: true });
+  toggleHeader();
 
   /* ---------- Menu burger (mobile) ---------- */
   var burger = document.getElementById('burger');
@@ -28,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
       burger.setAttribute('aria-expanded', String(isActive));
     });
 
-    // Ferme le menu quand on clique sur un lien
     nav.querySelectorAll('.nav-link').forEach(function (link) {
       link.addEventListener('click', closeMenu);
     });
@@ -49,8 +62,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
     fadeEls.forEach(function (el) { observer.observe(el); });
   } else {
-    // Fallback : pas d'IntersectionObserver, on affiche tout directement
     fadeEls.forEach(function (el) { el.classList.add('visible'); });
+  }
+
+  /* ---------- Tilt 3D au survol (cartes services / hub / entreprises) ---------- */
+  if (canHover && !reduceMotion) {
+    document.querySelectorAll('.tilt').forEach(function (card) {
+      card.addEventListener('mousemove', function (e) {
+        var r = card.getBoundingClientRect();
+        var x = e.clientX - r.left;
+        var y = e.clientY - r.top;
+        var rotY = ((x - r.width / 2) / (r.width / 2)) * 8;
+        var rotX = -((y - r.height / 2) / (r.height / 2)) * 8;
+        card.style.transform = 'perspective(900px) rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg) translateY(-6px)';
+      });
+
+      card.addEventListener('mouseleave', function () {
+        card.style.transform = '';
+      });
+    });
   }
 
   /* ---------- Bouton retour en haut ---------- */
@@ -89,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var nameInput = document.getElementById('name');
       var firstName = nameInput.value.trim().split(' ')[0] || '';
 
-      confirmation.textContent = 'Merci ' + firstName + ' ! Votre message a bien été envoyé. Notre équipe vous recontactera très vite.';
+      confirmation.textContent = 'Merci ' + firstName + ' ! Votre demande a bien été envoyée. Notre équipe vous recontactera très vite pour connecter votre entreprise au Hub.';
       confirmation.classList.add('show');
 
       contactForm.reset();

@@ -1,4 +1,4 @@
-Voix off (masculine, jeune, professionnelle, confiante) — 5 répliques, timings en secondes :
+Voix off : ElevenLabs (voix « Roger »), découpée en 5 répliques calées sur les scènes. Timings en secondes :
 [0.3]  Être présent sur les réseaux sociaux ne suffit plus.
 [4.5]  Aujourd'hui, votre entreprise doit attirer, convaincre et créer une vraie connexion avec ses clients.
 [11.0] Je suis Landry Tcheudjui, Community Manager et Digital Strategist.

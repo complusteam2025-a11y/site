@@ -40,6 +40,11 @@ canvas#fx{position:absolute;inset:0}
 .flash{position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,#fff,#8fd3ff 40%,transparent 75%);opacity:0;pointer-events:none;mix-blend-mode:screen}
 .scan{position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.0) 0 3px,rgba(0,0,0,.07) 3px 4px);pointer-events:none;opacity:.5}
 .vig{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.55));pointer-events:none}
+.cap{position:absolute;left:60px;right:60px;top:1630px;display:flex;justify-content:center;opacity:0;pointer-events:none;z-index:50}
+.cap div{display:inline-block;text-align:center;font-weight:900;font-size:62px;line-height:1.18;padding:22px 40px 26px;border-radius:40px;background:rgba(5,10,28,.72);border:2px solid rgba(255,255,255,.16);box-shadow:0 20px 70px rgba(0,0,0,.55),0 0 50px rgba(30,107,255,.25);backdrop-filter:blur(10px)}
+.cap span{display:inline-block;margin:0 .12em;color:#fff;transition:none}
+.cap span.on{color:#FFD86B;text-shadow:0 0 26px rgba(245,196,81,.8)}
+.cap span.past{color:#e8eeff}
 </style>
 </head>
 <body>
@@ -96,7 +101,7 @@ canvas#fx{position:absolute;inset:0}
       <div id="s3sub" style="margin-top:34px;font-size:40px;font-weight:800;letter-spacing:7px;color:#9fd8ff">COMMUNITY MANAGER<br>&amp; DIGITAL STRATEGIST</div>
     </div>
     <div id="s3soc"></div>
-    <div class="abs" id="s3list" style="left:90px;top:900px;display:flex;flex-direction:column;gap:30px"></div>
+    <div class="abs" id="s3list" style="left:90px;top:950px;display:flex;flex-direction:column;gap:30px"></div>
   </div>
 
   <!-- SCENE 4 -->
@@ -138,6 +143,7 @@ canvas#fx{position:absolute;inset:0}
     </div>
   </div>
 
+  <div class="cap" id="cap"><div id="capi"></div></div>
   <div class="scan"></div>
   <div class="vig"></div>
   <div class="flash" id="flash"></div>
@@ -279,7 +285,7 @@ function render(t){
     document.querySelectorAll("#s3soc .soc").forEach(e=>{
       const i=+e.dataset.i,pp=eb(seg(t,11.2+i*.25,11.9+i*.25));
       const ang=t*.9+i*2.094,rx=380,ry=70;
-      const bx=540-75+Math.cos(ang)*rx,by=620+Math.sin(ang)*55;
+      const bx=540-75+Math.cos(ang)*rx,by=745+Math.sin(ang)*40;
       e.style.left=bx+"px";e.style.top=(by-0)+"px";
       e.style.opacity=clamp(pp);
       e.style.transform=`scale(${.4+.6*pp*(0.85+0.15*Math.sin(ang+1.57))}) rotate(${Math.sin(t+i)*8}deg)`;
@@ -332,8 +338,40 @@ function render(t){
     $("s5n2").style.opacity=np;$("s5n2").style.transform=`translateY(${(1-eb(seg(t,28.6,29.2)))*80}px)`;
     $("s5").style.transform="";
   }
+  captions(t);
   // final fade
   $("stage").style.opacity=1-seg(t,29.8,30);
+}
+// ---------- sous-titres animés (?subs) ----------
+const SUBS=new URLSearchParams(location.search).has('subs');
+const LINES=[[0.3,2.6,"Être présent sur|les réseaux sociaux|ne suffit plus."],
+[4.5,5.52,"Aujourd’hui, votre entreprise|doit attirer, convaincre|et créer une vraie connexion|avec ses clients."],
+[11.0,3.69,"Je suis Landry Tcheudjui,|Community Manager|et Digital Strategist."],
+[17.0,4.77,"J’aide les entreprises|à développer leur|image en ligne|grâce à une stratégie|digitale adaptée."],
+[25.3,2.29,"Demandez votre audit|gratuit dès maintenant."]];
+const CHUNKS=[];
+LINES.forEach(([st,d,txt])=>{
+  const ch=txt.split("|").map(c=>c.split(" "));
+  const wt=ch.map(c=>c.map(w=>w.length+(/[,.]$/.test(w)?3:1)));
+  const tot=wt.flat().reduce((a,b)=>a+b,0);let acc=st;
+  ch.forEach((words,ci)=>{
+    const ws=[];words.forEach((w,wi)=>{const dd=d*wt[ci][wi]/tot;ws.push({w,a:acc,b:acc+dd});acc+=dd});
+    CHUNKS.push({a:ws[0].a,b:ws[ws.length-1].b,ws,last:ci==ch.length-1});
+  });
+});
+function captions(t){
+  const el=$("cap");if(!SUBS){el.style.display="none";return}
+  const c=CHUNKS.find((c,i)=>t>=c.a-.02&&t<(c.last?c.b+.25:CHUNKS[i+1]?CHUNKS[i+1].a:c.b+.25));
+  if(!c){el.style.opacity=0;return}
+  if(el.dataset.k!=String(c.a)){el.dataset.k=c.a;$("capi").innerHTML=c.ws.map(x=>`<span>${x.w}</span>`).join(" ")}
+  const sp=$("capi").children,pop=eb(seg(t,c.a,c.a+.18));
+  c.ws.forEach((x,i)=>{
+    const on=t>=x.a&&t<x.b,e=sp[i];
+    e.className=on?"on":(t>=x.b?"past":"");
+    e.style.transform=on?`scale(${1.12+.06*Math.sin(seg(t,x.a,x.b)*Math.PI)})`:"scale(1)";
+  });
+  el.style.opacity=clamp(pop)*(c.last?1-seg(t,c.b+.1,c.b+.25):1);
+  el.style.transform=`translateY(${(1-clamp(pop))*30}px) scale(${.92+.08*clamp(pop)})`;
 }
 window.render=render;
 render(0);
